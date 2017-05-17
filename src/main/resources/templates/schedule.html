@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8"/>
+    <title th:replace="${title}"></title>
+
+
+</head>
+<body class="container">
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th></th> <!--Empty box over the employee names to line up the empty boxes-->
+        <th>
+            <span>Sunday</span>
+        </th>
+        <th><span>Monday</span></th>
+        <th><span>Tuesday</span></th>
+        <th><span>Wednesday</span></th>
+        <th><span>Thursday</span></th>
+        <th><span>Friday</span></th>
+        <th><span>Saturday</span></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Employee</td>
+            <td>10-10</td>
+            <td>10-10</td>
+            <td>10-10</td>
+            <td>10-10</td>
+            <td>10-10</td>
+            <td>10-10</td>
+            <td>10-10</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

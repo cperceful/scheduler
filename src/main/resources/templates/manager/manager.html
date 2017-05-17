@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<ul>
+    <li><a href="/manager/viewavailability">View Availability</a></li>
+    <li><a href="/manager/viewrequestsoff">View Requests Off</a></li>
+    <li><a href="/manager/writeschedule">Write Schedule</a></li>
+</ul>
+</body>
+</html>
