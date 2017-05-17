@@ -35,4 +35,10 @@ public class ManagerController {
         model.addAttribute("title", "Write Schedule");
         return "manager/writeschedule";
     }
+
+    @RequestMapping(value = "addemployee")
+    public String addEmployee(Model model){
+        model.addAttribute("title", "Add Employee");
+        return "manager/addemployee";
+    }
 }
