@@ -1,8 +1,12 @@
 package com.cperceful.controllers;
 
+import com.cperceful.models.Employee;
+import com.cperceful.models.data.EmployeeDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Contoller to handle all /manager requests
@@ -11,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "manager")
 public class ManagerController {
+
+    @Autowired
+    EmployeeDao employeeDao;
 
     @RequestMapping(value = "")
     public String managerLanding(Model model){
@@ -36,9 +43,12 @@ public class ManagerController {
         return "manager/writeschedule";
     }
 
-    @RequestMapping(value = "addemployee")
+    @RequestMapping(value = "addemployee", method = RequestMethod.GET)
     public String addEmployee(Model model){
+
         model.addAttribute("title", "Add Employee");
+        model.addAttribute(new Employee());
+
         return "manager/addemployee";
     }
 }
